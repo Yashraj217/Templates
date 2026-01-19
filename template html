@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Luxury Estates - Premium Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="temp.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+
+        * {
+            font-family: 'Sora', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <nav
+        class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-xl border-b border-gray-200 z-50 shadow-md dark:bg-slate-900/90 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-24">
+                <div class="flex items-center gap-2">
+                    <div
+                        class="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-amber-300 to-orange-500 rounded-lg flex items-center justify-center">
+                        <span class="font-bold text-slate-900 text-sm md:text-lg">E</span>
+                    </div>
+                    <div>
+                        <span class="text-sm md:text-lg font-bold text-slate-900 dark:text-white">ELEGANT</span>
+                        <span class="text-xs text-amber-500 block font-semibold">ESTATES</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#hero"
+                        class="text-slate-700 hover:text-amber-500 transition font-medium dark:text-gray-300 dark:hover:text-amber-400">HOME</a>
+                    <a href="#properties"
+                        class="text-slate-700 hover:text-amber-500 transition font-medium dark:text-gray-300 dark:hover:text-amber-400">PROPERTIES</a>
+                    <a href="#team"
+                        class="text-slate-700 hover:text-amber-500 transition font-medium dark:text-gray-300 dark:hover:text-amber-400">TEAM</a>
+                    <a href="#contact"
+                        class="text-slate-700 hover:text-amber-500 transition font-medium dark:text-gray-300 dark:hover:text-amber-400">CONTACT</a>
+                    <button id="darkModeBtn"
+                        class="p-2 rounded-lg bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition text-slate-900 dark:text-yellow-300">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn" class="md:hidden text-amber-500 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu"
+                class="hidden md:hidden border-t border-gray-200 bg-white dark:bg-slate-900 dark:border-gray-700">
+                <div class="px-4 py-4 space-y-3">
+                    <a href="#hero"
+                        class="block text-slate-700 hover:text-amber-500 py-2 dark:text-gray-300 dark:hover:text-amber-400">HOME</a>
+                    <a href="#properties"
+                        class="block text-slate-700 hover:text-amber-500 py-2 dark:text-gray-300 dark:hover:text-amber-400">PROPERTIES</a>
+                    <a href="#team"
+                        class="block text-slate-700 hover:text-amber-500 py-2 dark:text-gray-300 dark:hover:text-amber-400">TEAM</a>
+                    <a href="#contact"
+                        class="block text-slate-700 hover:text-amber-500 py-2 dark:text-gray-300 dark:hover:text-amber-400">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen pt-20 md:pt-32 flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&h=900&fit=crop"
+                alt="Luxury Property" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20"></div>
+        </div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-20 z-10 w-full">
+            <div class="max-w-2xl">
+                <!-- Main Heading -->
+                <h1
+                    class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-4 md:mb-8">
+                    Find Your Perfect Property
+                </h1>
+
+                <!-- Search Section -->
+                <div class="flex flex-row gap-0 bg-white rounded-full p-2 shadow-2xl items-center w-full">
+                    <!-- Search Type Dropdown -->
+                    <select
+                        class="px-4 md:px-6 py-3 md:py-4 bg-transparent text-slate-700 font-semibold focus:outline-none text-sm md:text-base flex-shrink-0">
+                        <option>Search by</option>
+                        <option>City</option>
+                        <option>Price</option>
+                        <option>Type</option>
+                    </select>
+
+                    <!-- Search Input -->
+                    <input type="text" placeholder="City, Address, Postal Code, MLS^#"
+                        class="flex-1 px-4 md:px-6 py-3 md:py-4 bg-transparent text-slate-700 placeholder-gray-400 focus:outline-none text-sm md:text-base">
+
+                    <!-- Search Button -->
+                    <button
+                        class="bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold hover:shadow-lg transition flex-shrink-0 mx-1">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <!-- Additional Options -->
+                <p class="text-white mt-4 md:mt-6 text-xs md:text-sm">For more options <button
+                        onclick="openAdvancedSearch()" class="font-bold hover:text-amber-300 transition">CLICK HERE <i
+                            class="fas fa-chevron-down"></i></button></p>
+            </div>
+        </div>
+
+        <!-- Right Side Decoration - Agent Photo -->
+        <div class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 z-5">
+            <div class="w-96 h-96 opacity-20">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=500&fit=crop"
+                    alt="Property" class="w-full h-full object-cover rounded-2xl">
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Advanced Search Modal -->
+    <div id="advancedSearchModal"
+        class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full my-8">
+            <!-- Close Button -->
+            <div class="flex justify-between items-center p-6 md:p-8 border-b border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Advanced Search</h2>
+                <button onclick="closeAdvancedSearch()" class="text-gray-500 hover:text-slate-900 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="p-6 md:p-8 space-y-6">
+                <!-- Search Input Row -->
+                <div class="flex gap-4">
+                    <input type="text" placeholder="City, Address, Postal Code, MLS^#"
+                        class="flex-1 px-6 py-3 bg-gray-100 border border-gray-300 rounded-full text-slate-700 placeholder-gray-500 focus:outline-none focus:border-amber-400">
+                    <button
+                        class="bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 px-8 py-3 rounded-full font-bold hover:shadow-lg transition">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <!-- Filters Row 1 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <select
+                        class="px-6 py-3 bg-gray-100 border border-gray-300 rounded-full text-slate-700 focus:outline-none focus:border-amber-400 font-medium">
+                        <option>Residential</option>
+                        <option>Commercial</option>
+                        <option>Industrial</option>
+                    </select>
+                    <select
+                        class="px-6 py-3 bg-gray-100 border border-gray-300 rounded-full text-slate-700 focus:outline-none focus:border-amber-400 font-medium">
+                        <option>Price Range</option>
+                        <option>Under $500K</option>
+                        <option>$500K - $1M</option>
+                        <option>$1M+</option>
+                    </select>
+                    <select
+                        class="px-6 py-3 bg-gray-100 border border-gray-300 rounded-full text-slate-700 focus:outline-none focus:border-amber-400 font-medium">
+                        <option>Home Type</option>
+                        <option>Single Family</option>
+                        <option>Condo</option>
+                        <option>Townhouse</option>
+                    </select>
+                </div>
+
+                <!-- Filters Row 2 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <select
+                        class="px-6 py-3 bg-gray-100 border border-gray-300 rounded-full text-slate-700 focus:outline-none focus:border-amber-400 font-medium">
+                        <option>For Sale</option>
+                        <option>For Rent</option>
+                        <option>Sold</option>
+                    </select>
+                    <select
+                        class="px-6 py-3 bg-gray-100 border border-gray-300 rounded-full text-slate-700 focus:outline-none focus:border-amber-400 font-medium">
+                        <option>Beds</option>
+                        <option>1 Bed</option>
+                        <option>2 Beds</option>
+                        <option>3 Beds</option>
+                        <option>4+ Beds</option>
+                    </select>
+                    <select
+                        class="px-6 py-3 bg-gray-100 border border-gray-300 rounded-full text-slate-700 focus:outline-none focus:border-amber-400 font-medium">
+                        <option>Baths</option>
+                        <option>1 Bath</option>
+                        <option>2 Baths</option>
+                        <option>3 Baths</option>
+                        <option>4+ Baths</option>
+                    </select>
+                </div>
+
+                <!-- Filters Row 3 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <select
+                        class="px-6 py-3 bg-gray-100 border border-gray-300 rounded-full text-slate-700 focus:outline-none focus:border-amber-400 font-medium">
+                        <option>Property Type</option>
+                        <option>House</option>
+                        <option>Apartment</option>
+                        <option>Land</option>
+                    </select>
+                    <select
+                        class="px-6 py-3 bg-gray-100 border border-gray-300 rounded-full text-slate-700 focus:outline-none focus:border-amber-400 font-medium">
+                        <option>Square Feet (ft²)</option>
+                        <option>Under 1000 sqft</option>
+                        <option>1000 - 2000 sqft</option>
+                        <option>2000+ sqft</option>
+                    </select>
+                    <select
+                        class="px-6 py-3 bg-gray-100 border border-gray-300 rounded-full text-slate-700 focus:outline-none focus:border-amber-400 font-medium">
+                        <option>Days On Market</option>
+                        <option>New Listings</option>
+                        <option>Last 7 Days</option>
+                        <option>Last 30 Days</option>
+                    </select>
+                </div>
+
+                <!-- Filters Row 4 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <select
+                        class="px-6 py-3 bg-gray-100 border border-gray-300 rounded-full text-slate-700 focus:outline-none focus:border-amber-400 font-medium">
+                        <option>Show Only</option>
+                        <option>Open Houses</option>
+                        <option>New Listings</option>
+                        <option>Price Reduced</option>
+                    </select>
+                    <div class="md:col-span-2 flex gap-2">
+                        <input type="text" placeholder="Keywords: Pool, Parking, A/C ..."
+                            class="flex-1 px-6 py-3 bg-gray-100 border border-gray-300 rounded-full text-slate-700 placeholder-gray-500 focus:outline-none focus:border-amber-400">
+                        <button
+                            class="px-6 py-3 bg-gray-200 border border-gray-300 rounded-full text-slate-700 font-medium hover:bg-gray-300 transition">
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col md:flex-row gap-4 pt-4 border-t border-gray-200">
+                    <button
+                        class="flex-1 px-6 py-3 bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 font-bold rounded-full hover:shadow-lg transition">
+                        Search Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Listings -->
+    <section id="properties" class="py-32 bg-gradient-to-b from-gray-50 to-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-4">Featured Listings</h2>
+                <p class="text-xl text-gray-600">Handpicked premium properties for discerning clients</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-amber-400 hover:shadow-lg transition h-full flex flex-col">
+                    <div class="relative h-56 overflow-hidden flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=500&fit=crop"
+                            alt="Property"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-amber-400 text-slate-900 px-3 py-1 rounded-full font-bold text-xs">
+                            Featured</div>
+                    </div>
+                    <div class="p-4 space-y-3 flex flex-col flex-grow">
+                        <div>
+                            <p class="text-xl font-bold text-amber-500 mb-1">$1,599,000</p>
+                            <h3 class="text-sm font-bold text-slate-900 line-clamp-2 h-9">875 Riverside Drive</h3>
+                            <p class="text-gray-600 text-xs">Ajax, Ontario</p>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-600 border-t border-gray-200 pt-3 mt-auto">
+                            <span><i class="fas fa-bed text-amber-400 mr-1"></i>4 BD</span>
+                            <span><i class="fas fa-bath text-amber-400 mr-1"></i>4 BA</span>
+                            <span><i class="fas fa-expand text-amber-400 mr-1"></i>3,200</span>
+                        </div>
+                        <button
+                            class="w-full mt-2 px-3 py-2 bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition text-sm">View
+                            Details</button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-amber-400 hover:shadow-lg transition h-full flex flex-col">
+                    <div class="relative h-56 overflow-hidden flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&h=500&fit=crop"
+                            alt="Property"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-red-500 text-white px-3 py-1 rounded-full font-bold text-xs">
+                            Hot Deal</div>
+                    </div>
+                    <div class="p-4 space-y-3 flex flex-col flex-grow">
+                        <div>
+                            <p class="text-xl font-bold text-amber-500 mb-1">$1,225,000</p>
+                            <h3 class="text-sm font-bold text-slate-900 line-clamp-2 h-9">86 Rollo Drive</h3>
+                            <p class="text-gray-600 text-xs">Ajax, Ontario</p>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-600 border-t border-gray-200 pt-3 mt-auto">
+                            <span><i class="fas fa-bed text-amber-400 mr-1"></i>4 BD</span>
+                            <span><i class="fas fa-bath text-amber-400 mr-1"></i>5 BA</span>
+                            <span><i class="fas fa-expand text-amber-400 mr-1"></i>2,850</span>
+                        </div>
+                        <button
+                            class="w-full mt-2 px-3 py-2 bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition text-sm">View
+                            Details</button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-amber-400 hover:shadow-lg transition h-full flex flex-col">
+                    <div class="relative h-56 overflow-hidden flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&h=500&fit=crop"
+                            alt="Property"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-amber-400 text-slate-900 px-3 py-1 rounded-full font-bold text-xs">
+                            Featured</div>
+                    </div>
+                    <div class="p-4 space-y-3 flex flex-col flex-grow">
+                        <div>
+                            <p class="text-xl font-bold text-amber-500 mb-1">$924,900</p>
+                            <h3 class="text-sm font-bold text-slate-900 line-clamp-2 h-9">18 Charlton Crescent</h3>
+                            <p class="text-gray-600 text-xs">Ajax, Ontario</p>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-600 border-t border-gray-200 pt-3 mt-auto">
+                            <span><i class="fas fa-bed text-amber-400 mr-1"></i>4 BD</span>
+                            <span><i class="fas fa-bath text-amber-400 mr-1"></i>4 BA</span>
+                            <span><i class="fas fa-expand text-amber-400 mr-1"></i>2,600</span>
+                        </div>
+                        <button
+                            class="w-full mt-2 px-3 py-2 bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition text-sm">View
+                            Details</button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-amber-400 hover:shadow-lg transition h-full flex flex-col">
+                    <div class="relative h-56 overflow-hidden flex-shrink-0">
+                        <img src="property.png" alt="Property"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-amber-400 text-slate-900 px-3 py-1 rounded-full font-bold text-xs">
+                            Featured</div>
+                    </div>
+                    <div class="p-4 space-y-3 flex flex-col flex-grow">
+                        <div>
+                            <p class="text-xl font-bold text-amber-500 mb-1">$1,399,000</p>
+                            <h3 class="text-sm font-bold text-slate-900 line-clamp-2 h-9">45 Lakeview Avenue</h3>
+                            <p class="text-gray-600 text-xs">Ajax, Ontario</p>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-600 border-t border-gray-200 pt-3 mt-auto">
+                            <span><i class="fas fa-bed text-amber-400 mr-1"></i>5 BD</span>
+                            <span><i class="fas fa-bath text-amber-400 mr-1"></i>4 BA</span>
+                            <span><i class="fas fa-expand text-amber-400 mr-1"></i>3,100</span>
+                        </div>
+                        <button
+                            class="w-full mt-2 px-3 py-2 bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition text-sm">View
+                            Details</button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-amber-400 hover:shadow-lg transition h-full flex flex-col">
+                    <div class="relative h-56 overflow-hidden flex-shrink-0">
+                        <img src="property2.png" alt="Property"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-red-500 text-white px-3 py-1 rounded-full font-bold text-xs">
+                            Hot Deal</div>
+                    </div>
+                    <div class="p-4 space-y-3 flex flex-col flex-grow">
+                        <div>
+                            <p class="text-xl font-bold text-amber-500 mb-1">$1,050,000</p>
+                            <h3 class="text-sm font-bold text-slate-900 line-clamp-2 h-9">22 Maple Street</h3>
+                            <p class="text-gray-600 text-xs">Ajax, Ontario</p>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-600 border-t border-gray-200 pt-3 mt-auto">
+                            <span><i class="fas fa-bed text-amber-400 mr-1"></i>4 BD</span>
+                            <span><i class="fas fa-bath text-amber-400 mr-1"></i>3 BA</span>
+                            <span><i class="fas fa-expand text-amber-400 mr-1"></i>2,500</span>
+                        </div>
+                        <button
+                            class="w-full mt-2 px-3 py-2 bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition text-sm">View
+                            Details</button>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-amber-400 hover:shadow-lg transition h-full flex flex-col">
+                    <div class="relative h-56 overflow-hidden flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=600&h=500&fit=crop"
+                            alt="Property"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-amber-400 text-slate-900 px-3 py-1 rounded-full font-bold text-xs">
+                            Featured</div>
+                    </div>
+                    <div class="p-4 space-y-3 flex flex-col flex-grow">
+                        <div>
+                            <p class="text-xl font-bold text-amber-500 mb-1">$1,175,000</p>
+                            <h3 class="text-sm font-bold text-slate-900 line-clamp-2 h-9">55 Oak Ridge Court</h3>
+                            <p class="text-gray-600 text-xs">Ajax, Ontario</p>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-600 border-t border-gray-200 pt-3 mt-auto">
+                            <span><i class="fas fa-bed text-amber-400 mr-1"></i>5 BD</span>
+                            <span><i class="fas fa-bath text-amber-400 mr-1"></i>4 BA</span>
+                            <span><i class="fas fa-expand text-amber-400 mr-1"></i>2,950</span>
+                        </div>
+                        <button
+                            class="w-full mt-2 px-3 py-2 bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition text-sm">View
+                            Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <button
+                    class="px-10 py-4 bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition transform hover:scale-105 text-lg">
+                    View All Properties
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Where to Start Section -->
+    <section class="py-32 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold text-white mb-4">Don't know where to start?</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">No problem, we can help. Just tell us a little about
+                    yourself.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-0 max-w-5xl mx-auto">
+                <!-- Buy Card -->
+                <div
+                    class="group bg-white rounded-3xl p-12 hover:shadow-2xl transition cursor-pointer w-full md:w-96 md:-mr-8 relative z-10 md:z-20 flex flex-col justify-center">
+                    <div class="flex justify-center mb-8">
+                        <div class="text-5xl text-blue-500">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-slate-900 text-center mb-2">I am looking to buy.</h3>
+                    <div class="flex justify-center gap-2 mb-4">
+                        <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                        <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                    </div>
+                    <p class="text-gray-600 text-center mt-2">Find your perfect home with our expert guidance and
+                        curated listings.</p>
+                    <div class="mt-8 text-center">
+                        <a href="#"
+                            class="inline-flex items-center text-blue-500 font-semibold hover:text-blue-600 transition text-lg">
+                            Get Started <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sell Card -->
+                <div
+                    class="group bg-white rounded-3xl p-12 hover:shadow-2xl transition cursor-pointer w-full md:w-96 relative z-10 flex flex-col justify-center">
+                    <div class="flex justify-center mb-8">
+                        <div class="text-5xl text-blue-500">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-slate-900 text-center mb-2">I am looking to sell.</h3>
+                    <div class="flex justify-center gap-2 mb-4">
+                        <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                        <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                    </div>
+                    <p class="text-gray-600 text-center mt-2">Sell your property quickly with our proven strategies and
+                        marketing expertise.</p>
+                    <div class="mt-8 text-center">
+                        <a href="#"
+                            class="inline-flex items-center text-blue-500 font-semibold hover:text-blue-600 transition text-lg">
+                            Get Started <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search By City Section -->
+    <section class="py-32 bg-gradient-to-b from-white to-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+                <!-- Left Content -->
+                <div class="lg:col-span-1 flex flex-col justify-start pt-8">
+                    <h2 class="text-5xl lg:text-5xl font-bold text-slate-900 mb-4 leading-tight">Search<br>By City</h2>
+                    <p class="text-xl text-gray-600">Our Areas of Focus</p>
+                </div>
+
+                <!-- City Cards Grid -->
+                <div class="lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Toronto Card -->
+                    <div
+                        class="group relative h-80 rounded-3xl overflow-hidden cursor-pointer hover:shadow-2xl hover:shadow-amber-500/20 transition duration-500">
+                        <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=500&h=600&fit=crop"
+                            alt="Toronto"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-50 group-hover:opacity-40 transition duration-300">
+                        </div>
+                        <div class="absolute inset-0 flex flex-col justify-between p-6">
+                            <span class="text-xs font-semibold text-amber-400 uppercase tracking-widest">Search
+                                In</span>
+                            <div>
+                                <h3 class="text-4xl font-bold text-white mb-4">Toronto</h3>
+                                <a href="#"
+                                    class="inline-flex items-center text-white font-semibold hover:text-amber-400 transition group">
+                                    See Listings <i
+                                        class="fas fa-chevron-right ml-2 group-hover:translate-x-1 transition"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ottawa Card -->
+                    <div
+                        class="group relative h-80 rounded-3xl overflow-hidden cursor-pointer hover:shadow-2xl hover:shadow-amber-500/20 transition duration-500">
+                        <img src="prop_out.png" alt="Ottawa"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-60 group-hover:opacity-50 transition duration-300">
+                        </div>
+                        <div class="absolute inset-0 flex flex-col justify-between p-6">
+                            <span class="text-xs font-semibold text-amber-400 uppercase tracking-widest">Search
+                                In</span>
+                            <div>
+                                <h3 class="text-4xl font-bold text-white mb-4">Ottawa</h3>
+                                <a href="#"
+                                    class="inline-flex items-center text-white font-semibold hover:text-amber-400 transition group">
+                                    See Listings <i
+                                        class="fas fa-chevron-right ml-2 group-hover:translate-x-1 transition"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kingston Card -->
+                    <div
+                        class="group relative h-80 rounded-3xl overflow-hidden cursor-pointer hover:shadow-2xl hover:shadow-amber-500/20 transition duration-500">
+                        <img src="prop2.png" alt="Kingston"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-60 group-hover:opacity-50 transition duration-300">
+                        </div>
+                        <div class="absolute inset-0 flex flex-col justify-between p-6">
+                            <span class="text-xs font-semibold text-amber-400 uppercase tracking-widest">Search
+                                In</span>
+                            <div>
+                                <h3 class="text-4xl font-bold text-white mb-4">Kingston</h3>
+                                <a href="#"
+                                    class="inline-flex items-center text-white font-semibold hover:text-amber-400 transition group">
+                                    See Listings <i
+                                        class="fas fa-chevron-right ml-2 group-hover:translate-x-1 transition"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hamilton Card -->
+                    <div
+                        class="group relative h-80 rounded-3xl overflow-hidden cursor-pointer hover:shadow-2xl hover:shadow-amber-500/20 transition duration-500">
+                        <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=500&h=600&fit=crop"
+                            alt="Hamilton"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-60 group-hover:opacity-50 transition duration-300">
+                        </div>
+                        <div class="absolute inset-0 flex flex-col justify-between p-6">
+                            <span class="text-xs font-semibold text-amber-400 uppercase tracking-widest">Search
+                                In</span>
+                            <div>
+                                <h3 class="text-4xl font-bold text-white mb-4">Hamilton</h3>
+                                <a href="#"
+                                    class="inline-flex items-center text-white font-semibold hover:text-amber-400 transition group">
+                                    See Listings <i
+                                        class="fas fa-chevron-right ml-2 group-hover:translate-x-1 transition"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Pre-Construction Condo Projects Section -->
+    <section class="py-16 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Latest Pre-Construction Condo Projects
+                </h2>
+                <div class="flex justify-center">
+                    <div class="w-16 h-1 bg-blue-500 rounded-full"></div>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&h=400&fit=crop"
+                        alt="MRKT Alexandra Park" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">MRKT ALEXANDRA PARK</h3>
+                        <div class="space-y-2 text-sm text-gray-700 mb-4">
+                            <p><span class="font-semibold text-slate-900">Occupancy Date:</span> 1764120300</p>
+                            <p><span class="font-semibold text-slate-900">City:</span> Toronto</p>
+                            <p><span class="font-semibold text-slate-900">Main Intersection:</span> Dundas St W</p>
+                            <p><span class="font-semibold text-slate-900">Builders:</span> Tridel</p>
+                            <p><span class="font-semibold text-slate-900">Price:</span> Call for pricing</p>
+                        </div>
+                        <button
+                            class="w-full px-3 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition uppercase tracking-wide text-xs">Register
+                            for VIP Access</button>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&h=400&fit=crop"
+                        alt="Upper West Side Condos 2" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">UPPER WEST SIDE CONDOS 2</h3>
+                        <div class="space-y-2 text-sm text-gray-700 mb-4">
+                            <p><span class="font-semibold text-slate-900">Occupancy Date:</span> 2023</p>
+                            <p><span class="font-semibold text-slate-900">City:</span> Oakville</p>
+                            <p><span class="font-semibold text-slate-900">Main Intersection:</span> Trafalgar Road</p>
+                            <p><span class="font-semibold text-slate-900">Builders:</span> Branthaven Homes</p>
+                            <p><span class="font-semibold text-slate-900">Price:</span> Call for pricing</p>
+                        </div>
+                        <button
+                            class="w-full px-3 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition uppercase tracking-wide text-xs">Register
+                            for VIP Access</button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&h=400&fit=crop"
+                        alt="House of Assembly" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">HOUSE OF ASSEMBLY</h3>
+                        <div class="space-y-2 text-sm text-gray-700 mb-4">
+                            <p><span class="font-semibold text-slate-900">Occupancy Date:</span> 1766280300</p>
+                            <p><span class="font-semibold text-slate-900">City:</span> Toronto</p>
+                            <p><span class="font-semibold text-slate-900">Main Intersection:</span> Sterling Road</p>
+                            <p><span class="font-semibold text-slate-900">Builders:</span> Marlin Spring Development</p>
+                            <p><span class="font-semibold text-slate-900">Price:</span> Call for pricing</p>
+                        </div>
+                        <button
+                            class="w-full px-3 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition uppercase tracking-wide text-xs">Register
+                            for VIP Access</button>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=500&h=400&fit=crop"
+                        alt="Promenade Park Towers" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">PROMENADE PARK TOWERS</h3>
+                        <div class="space-y-2 text-sm text-gray-700 mb-4">
+                            <p><span class="font-semibold text-slate-900">Occupancy Date:</span> 1764120240</p>
+                            <p><span class="font-semibold text-slate-900">City:</span> Vaughan</p>
+                            <p><span class="font-semibold text-slate-900">Main Intersection:</span> Promenade Circle</p>
+                            <p><span class="font-semibold text-slate-900">Builders:</span> Liberty Development Co</p>
+                            <p><span class="font-semibold text-slate-900">Price:</span> Call for pricing</p>
+                        </div>
+                        <button
+                            class="w-full px-3 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition uppercase tracking-wide text-xs">Register
+                            for VIP Access</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View More Button -->
+            <div class="text-center">
+                <button
+                    class="px-6 py-2 border-2 border-blue-500 text-blue-500 font-bold rounded-lg hover:bg-blue-500 hover:text-white transition uppercase tracking-wide text-sm">View
+                    More Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="features"
+        class="py-32 bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border-t border-gray-200 border-b border-gray-200 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 right-1/3 w-80 h-80 bg-amber-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-4">What's My Home <span
+                            class="text-amber-500">Worth?</span></h2>
+                    <p class="text-xl text-gray-700">Get an instant, free valuation of your property. No obligations, no
+                        fees.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-amber-500"></i> Quick Assessment
+                        </li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-amber-500"></i> Expert Analysis
+                        </li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-amber-500"></i> Market
+                            Comparison</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-xl p-8">
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-amber-500 font-semibold mb-2">Your Address</label>
+                            <input type="text" placeholder="Enter your street address"
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-slate-900 placeholder-gray-500 focus:border-amber-400 focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-amber-500 font-semibold mb-2">City</label>
+                            <input type="text" placeholder="Enter your city"
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-slate-900 placeholder-gray-500 focus:border-amber-400 focus:outline-none transition">
+                        </div>
+                        <button type="button" onclick="getValuation()"
+                            class="w-full bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 font-bold py-3 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition transform hover:scale-105">
+                            Get My Home Valuation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-32 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-4">Expert Team</h2>
+                <p class="text-xl text-gray-600">Meet the professionals dedicated to your real estate success</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-amber-400 hover:shadow-lg transition">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
+                            alt="Patricia Lambert"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6 text-center space-y-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2">Patricia Lambert</h3>
+                            <p class="text-amber-500 font-semibold">Senior Sales Representative</p>
+                        </div>
+                        <p class="text-gray-600 text-sm">15+ years of experience in luxury real estate and residential
+                            market expertise.</p>
+                        <div class="flex justify-center gap-3 border-t border-gray-200 pt-4">
+                            <a href="tel:555-555-5577"
+                                class="flex-1 px-3 py-2 bg-gray-100 hover:bg-amber-50 text-amber-500 rounded-lg transition text-sm font-semibold">
+                                <i class="fas fa-phone mr-1"></i>Call
+                            </a>
+                            <a href="#contact"
+                                class="flex-1 px-3 py-2 bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition font-semibold text-sm">
+                                Contact
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-amber-400 hover:shadow-lg transition">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+                            alt="Adam Sandler"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6 text-center space-y-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2">Adam Sandler</h3>
+                            <p class="text-amber-500 font-semibold">Sales Representative</p>
+                        </div>
+                        <p class="text-gray-600 text-sm">Specialized in commercial properties, investments and
+                            first-time buyer programs.</p>
+                        <div class="flex justify-center gap-3 border-t border-gray-200 pt-4">
+                            <a href="tel:555-623-4222"
+                                class="flex-1 px-3 py-2 bg-gray-100 hover:bg-amber-50 text-amber-500 rounded-lg transition text-sm font-semibold">
+                                <i class="fas fa-phone mr-1"></i>Call
+                            </a>
+                            <a href="#contact"
+                                class="flex-1 px-3 py-2 bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition font-semibold text-sm">
+                                Contact
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-amber-400 hover:shadow-lg transition">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop"
+                            alt="Market Expert"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6 text-center space-y-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2">Market Expert</h3>
+                            <p class="text-amber-500 font-semibold">Real Estate Consultant</p>
+                        </div>
+                        <p class="text-gray-600 text-sm">Expert market analysis, property valuation, and investment
+                            consultation services.</p>
+                        <div class="flex justify-center gap-3 border-t border-gray-200 pt-4">
+                            <a href="tel:403-555-0142"
+                                class="flex-1 px-3 py-2 bg-gray-100 hover:bg-amber-50 text-amber-500 rounded-lg transition text-sm font-semibold">
+                                <i class="fas fa-phone mr-1"></i>Call
+                            </a>
+                            <a href="#contact"
+                                class="flex-1 px-3 py-2 bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition font-semibold text-sm">
+                                Contact
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-white to-gray-50 border-t border-gray-200">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Ready to Find Your Perfect Home?</h2>
+            <p class="text-xl text-gray-700 mb-10">Join thousands of satisfied clients who have found their ideal
+                property with our expert guidance</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="scrollToSearch()"
+                    class="px-8 py-4 bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition transform hover:scale-105 text-lg">
+                    Start Searching
+                </button>
+                <a href="#contact"
+                    class="px-8 py-4 border-2 border-amber-500 text-amber-500 font-bold rounded-lg hover:bg-amber-50 transition text-lg">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-gradient-to-b from-white to-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-700">Our team is ready to help you find your perfect property</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-8 text-center hover:border-amber-400 hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-amber-50 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-phone text-amber-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Call Us</h3>
+                    <p class="text-gray-600 mb-4">Mon-Fri, 9am-6pm EST</p>
+                    <a href="tel:555-555-5577"
+                        class="text-amber-500 font-bold hover:text-orange-500 transition">555-555-5577</a>
+                </div>
+
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-8 text-center hover:border-amber-400 hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-amber-50 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-envelope text-amber-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Email Us</h3>
+                    <p class="text-gray-600 mb-4">We respond within 24 hours</p>
+                    <a href="mailto:info@elegantestates.com"
+                        class="text-amber-500 font-bold hover:text-orange-500 transition">info@elegantestates.com</a>
+                </div>
+
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-8 text-center hover:border-amber-400 hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-amber-50 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-amber-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Visit Us</h3>
+                    <p class="text-gray-600 mb-4">Our Office</p>
+                    <p class="text-amber-500 font-bold">Ajax, Ontario</p>
+                </div>
+            </div>
+
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h3>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your Full Name"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-slate-900 placeholder-gray-500 focus:border-amber-400 focus:outline-none transition">
+                        <input type="email" placeholder="Your Email Address"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-slate-900 placeholder-gray-500 focus:border-amber-400 focus:outline-none transition">
+                        <input type="tel" placeholder="Phone Number"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-slate-900 placeholder-gray-500 focus:border-amber-400 focus:outline-none transition">
+                        <textarea placeholder="Your Message" rows="5"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-slate-900 placeholder-gray-500 focus:border-amber-400 focus:outline-none transition resize-none"></textarea>
+                        <button type="button" onclick="sendMessage()"
+                            class="w-full bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 font-bold py-3 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-100 to-white border-t border-gray-200 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+                <!-- Logo & Contact Info -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-amber-300 to-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="font-bold text-slate-900 text-lg">E</span>
+                        </div>
+                        <div>
+                            <span class="text-lg font-bold text-slate-900">ELEGANT</span>
+                            <span class="text-xs text-amber-500 block">ESTATES</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">Your trusted partner in finding the perfect
+                        property.</p>
+                    <div class="space-y-2 text-sm text-gray-700 mb-4">
+                        <p><i class="fas fa-phone text-amber-500 mr-2"></i>Patricia: 555-555-5577</p>
+                        <p><i class="fas fa-phone text-amber-500 mr-2"></i>Adam: 555-623-4222</p>
+                        <p><i class="fas fa-phone text-amber-500 mr-2"></i>403-555-0142</p>
+                        <p><i class="fas fa-phone text-amber-500 mr-2"></i>1-888-555-0155</p>
+                        <p><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i>Ajax, Ontario</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-300 rounded-lg flex items-center justify-center text-gray-600 hover:bg-amber-400 hover:text-white transition">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-300 rounded-lg flex items-center justify-center text-gray-600 hover:bg-amber-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-300 rounded-lg flex items-center justify-center text-gray-600 hover:bg-amber-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-300 rounded-lg flex items-center justify-center text-gray-600 hover:bg-amber-400 hover:text-white transition">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-300 rounded-lg flex items-center justify-center text-gray-600 hover:bg-amber-400 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Residential Search -->
+                <div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-4">Residential Search</h4>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li><a href="#" class="hover:text-amber-500 transition">Pre-Construction Condo List</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Find My Dream Home</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Foreclosures/Power of Sale</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Calculators</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Free Home Evaluation</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Property Search</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">What's My Home Worth</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Real Estate News</a></li>
+                    </ul>
+                </div>
+
+                <!-- Residential Tools -->
+                <div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-4">Buyer Resources</h4>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li><a href="#" class="hover:text-amber-500 transition">Pre-Construction Condo Finder</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Price Drop Alert</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Buyers Daily Email Alerts</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Mortgage/Home Loans</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Sellers Daily Email Alerts</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <!-- Commercial -->
+                <div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-4">Commercial</h4>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li><a href="#" class="hover:text-amber-500 transition">Commercial Search</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Featured Listings</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Just Listed</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Neighbourhood Buzzer</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Buying Tips</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Selling Tips</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Dream Home Finder</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Real Estate Reports</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="border-t border-gray-300 pt-8">
+                    <div class="text-center text-gray-700 text-xs mb-4">
+                        <p class="mb-2">Elegant Estates | Premium Real Estate Solutions | Real Estate Website Design by
+                            Elegant Estates Solutions</p>
+                        <p><a href="#" class="hover:text-amber-500 transition">Terms of Service</a> | <a href="#"
+                                class="hover:text-amber-500 transition">Privacy Policy</a> | <a href="#"
+                                class="hover:text-amber-500 transition">User Login</a></p>
+                    </div>
+                    <div class="text-center text-gray-600 text-xs">
+                        <p>&copy; 2024 Elegant Estates. All rights reserved. Independently Owned & Operated.</p>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <button onclick="openChat()"
+        class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-r from-amber-300 to-orange-500 text-slate-900 rounded-full shadow-xl hover:shadow-2xl hover:shadow-amber-500/50 transition transform hover:scale-110 z-40 font-bold text-2xl flex items-center justify-center">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <script>
+        // Advanced Search Modal Functions
+        function openAdvancedSearch() {
+            document.getElementById('advancedSearchModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAdvancedSearch() {
+            document.getElementById('advancedSearchModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Dark Mode Toggle
+        const darkModeBtn = document.getElementById('darkModeBtn');
+        const htmlElement = document.documentElement;
+
+        // Check for saved dark mode preference or system preference
+        function initDarkMode() {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true' ||
+                (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            if (isDarkMode) {
+                htmlElement.classList.add('dark');
+                darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        }
+
+        // Toggle dark mode
+        if (darkModeBtn) {
+            darkModeBtn.addEventListener('click', function () {
+                const isDark = htmlElement.classList.toggle('dark');
+                localStorage.setItem('darkMode', isDark);
+                darkModeBtn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            });
+        }
+
+        // Initialize dark mode on page load
+        initDarkMode();
+
+        // Close modal when clicking outside
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('advancedSearchModal');
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    closeAdvancedSearch();
+                }
+            });
+        });
+    </script>
+
+    <script src="temp.js"></script>
+</body>
+
+</html>
